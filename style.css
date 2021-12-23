@@ -1,0 +1,18 @@
+label{
+	max-width: 300px;
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+textarea {
+	resize: none;
+}
+
+.messages-element{
+	background-color: rgb(220, 220, 220);
+	width: 200px;
+	margin: 15px 5px;
+	word-break: break-all;
+	cursor: pointer;
+}
