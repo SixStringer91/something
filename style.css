@@ -16,3 +16,23 @@ textarea {
 	word-break: break-all;
 	cursor: pointer;
 }
+
+.parameter-block{
+	display: flex;
+}
+
+.messages{
+width: 200px;
+}
+
+.timeouts{
+	width: 200px;
+}
+
+.timeout-element{
+	background-color: rgb(243, 170, 170);
+	width: 200px;
+	margin: 15px 5px;
+	word-break: break-all;
+	cursor: pointer;
+}
