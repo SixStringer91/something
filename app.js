@@ -131,16 +131,21 @@ const sendMessage = (baseList, tOutList) => {
   }
 };
 
+
 const addMessage2Block = () => {
   const txt = textareaInput.value;
-  manager.addMessage.call(manager, txt);
+  const list = txt.split(/\r\n|\r|\n/);
+  list.forEach(el => manager.addMessage.call(manager, el))
+  
 };
 
 const addTimeout2block = () => {
   const tOut = intervalInput.value;
-  const reg = new RegExp('^\\d+$');
-	console.log(reg.test(tOut))
-  if (reg.test(tOut)) manager.addTimeout.call(manager, tOut);
+	const list = tOut.split(/\r\n|\r|\n/);
+	list.forEach(el => {
+		const reg = new RegExp('^\\d+$');
+		if (reg.test(el)) manager.addTimeout.call(manager, el);
+	})
 };
 
 addMessage.addEventListener('click', addMessage2Block);
